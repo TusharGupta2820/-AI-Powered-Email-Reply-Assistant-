@@ -1,175 +1,78 @@
-# -AI-Powered-Email-Reply-Assistant-
-✉️ Email Reply Assistant Agent
+# Email Reply Assistant Agent
 
-An AI-powered Email Reply Assistant Agent that automatically generates professional, context-aware email replies.
-The agent understands the intent and tone of incoming emails and responds with polite, grammatically correct, and well-structured replies.
+An AI-powered assistant that helps generate professional email replies using advanced language models.
 
-This project demonstrates Agentic AI behavior using reasoning and decision-making with Large Language Models.
+## Features
 
-🚀 What This Project Does
+- **Context-aware replies**: Understands the intent of incoming emails
+- **Tone selection**: Choose between Formal, Casual, or Friendly tones
+- **Auto-tone detection**: Automatically detects appropriate tone if not specified
+- **Streamlit UI**: User-friendly interface for easy interaction
+- **Copy functionality**: One-click copy to clipboard for generated replies
 
-✔ Accepts incoming email content
-✔ Auto-detects appropriate reply tone
-✔ Supports Formal, Casual, and Friendly tones
-✔ Generates professional email responses
-✔ Allows manual tone selection
-✔ Copy-to-clipboard functionality
-✔ Clean and simple Streamlit UI
+## Requirements
 
-🤖 Agentic AI Behavior
+- Python 3.8 or higher
+- Internet connection for API access
 
-The Email Reply Assistant works as an intelligent AI agent:
+## Installation
 
-1️⃣ Perception
+1. Clone or download this repository
+2. Install the required dependencies:
 
-Reads incoming email text
-
-Identifies sender intent and context
-
-2️⃣ Reasoning
-
-Decides the appropriate tone:
-
-Formal (business emails)
-
-Casual (internal/team emails)
-
-Friendly (informal communication)
-
-Structures reply professionally
-
-3️⃣ Action
-
-Generates a complete email reply
-
-Displays output instantly
-
-Allows user to copy response
-
-🛠 Tech Stack
-
-Python 3.10+
-
-Streamlit – UI
-
-LLM API (OpenAI / compatible) – Text understanding & generation
-
-dotenv – Environment variable management
-
-📁 Project Structure
-email-reply-assistant-agent/
-│
-├── app.py          # Streamlit UI
-├── ai_agent.py     # Email analysis & reply generation logic
-├── config.py       # API key configuration
-├── requirements.txt
-├── .env            # API keys (not committed)
-└── README.md
-
-📌 Features
-
-✅ Email intent understanding
-
-✅ Auto tone detection
-
-✅ Manual tone override
-
-✅ Professional language generation
-
-✅ Copy-to-clipboard button
-
-✅ Clean modular code
-
-🔑 Prerequisites
-
-Python 3.10 or higher
-
-LLM API key (OpenAI / compatible)
-
-Git (optional)
-
-⚙️ Setup Instructions
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/email-reply-assistant-agent.git
-cd email-reply-assistant-agent
-
-2️⃣ Create Virtual Environment
-python -m venv venv
-
-
-Activate it:
-
-Windows
-
-venv\Scripts\activate
-
-
-Linux / Mac
-
-source venv/bin/activate
-
-3️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Set Environment Variables
+## Usage
 
-Create a .env file in the project root:
+1. Run the Streamlit application:
 
-OPENAI_API_KEY=your_api_key_here
-
-
-⚠️ Never commit API keys to GitHub
-
-5️⃣ Run the Application
+```bash
 streamlit run app.py
+```
 
+2. The application will open in your default browser at `http://localhost:8501`
 
-Open in browser:
+3. In the left panel:
+   - Paste or type the incoming email text in the text area
+   - Select your preferred response tone (Formal, Casual, Friendly) or leave as "Auto" for AI detection
+   - Click "Generate Reply"
 
-http://localhost:8501
+4. The generated reply will appear in the right panel
+5. Use the "📋 Copy to Clipboard" button to copy the reply to your clipboard
 
-🧠 How the AI Works
+## Project Structure
 
-The incoming email text is analyzed
+```
+EmailReplyAssistant/
+│
+├── app.py              # Streamlit UI implementation
+├── ai_agent.py         # AI logic and LLM integration
+├── config.py           # API key and configuration settings
+├── requirements.txt    # Python dependencies
+└── README.md          # This file
+```
 
-If tone is not selected:
+## How It Works
 
-AI automatically detects the appropriate tone
+1. **Intent Analysis**: The AI analyzes the incoming email to understand its purpose
+2. **Tone Detection**: Automatically detects appropriate response tone or uses your selection
+3. **Reply Generation**: Creates a context-aware, professional reply using the DeepSeek model
+4. **Output**: Provides a grammatically correct, polite, and professional reply
 
-LLM generates:
+## API Configuration
 
-Polite
+The application uses OpenRouter API with the DeepSeek model. The API key is configured in `config.py`.
 
-Context-aware
+## Example Use Cases
 
-Professionally structured response
+- Professional email correspondence
+- Customer service responses
+- Business communication
+- Follow-up emails
+- Meeting scheduling
 
-🖥 Example Usage
-Input Email
+## License
 
-Hi,
-I wanted to follow up on the internship application status.
-Please let me know when I can expect an update.
-
-AI-Generated Reply (Formal)
-
-Dear [Name],
-
-Thank you for reaching out. We appreciate your interest in the internship position. Our team is currently reviewing applications, and we will get back to you shortly with an update.
-
-Best regards,
-[Your Name]
-
-🔮 Future Enhancements
-
-📎 Email thread context support
-
-🌍 Multi-language replies
-
-📬 Gmail / Outlook integration
-
-🎤 Voice-to-email support
-
-🐳 Docker deployment
-
-🌐 Web app version (Flask + frontend)
+This project is created for educational and personal use.
